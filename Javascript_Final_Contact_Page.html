@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" type="text/css" href="css/dreaded_form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+
+
+<!--top section with large logo-->
+   <section class="header">
+       <nav>
+          <a href="dreaded_groomer_home.html"></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="dreaded_groomer_about.html">About</a></li>
+                  <li><a href="dreaded_groomer_services.html">Services</a></li>
+                  <li><a href="dreaded_groomer_products.html">Products</a></li>
+                  <li><a href="dreaded_groomer_contact.html">Connect</a></li>
+                  <li><a href="https://www.paypal.com/webapps/shoppingcart?mfid=1652030070119_f931095e18da4&flowlogging_id=f931095e18da4#/checkout/">Cart</a></li>
+              </ul>
+          </div>
+          <i class="fas fa-bars" onclick="showMenu()"></i>
+       </nav>
+   </section>
+
+   <!--Form-->
+
+<section class="contact">
+    <div class="content">
+        <h2>Connect With Us</h2><br>
+        <p>Looking for more information before booking or want to provide feedback? Send us a message! We will get back to you as soon as possible. </p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="far fa-map"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p> Add the address of business here <br> Phoenix, AZ <br> 85???</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fas fa-phone"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p> xxx-867-5309</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="far fa-envelope"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p> Email address</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactForm">
+            <form id="form" onsubmit="return validate()">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" id="name" name="Full Name" required="required">
+                        <span>Full Name</span>
+                </div>
+                
+                <div class="inputBox">
+                    <input type="text" id="email" name="Email" required="required">
+                        <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea id="message" required="required"></textarea>
+                        <span>Type your message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                        <span>I'm not a robot</span>
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Submit </button>
+                </div>
+                <p id="formSubmitted"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div>
+    <p class="link">
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fe-commerce.paradisevalley.edu%2Fcis233%2FRblank%2FDreaded%2520Groomer%2520Website%2Fdreaded_groomer_contact.html"><img src="images/valid-html5.png" alt="HTML Valid"/></a>
+      </p>
+</div>
+
+<!--javascript for toggle menu-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+    function validate(form) {
+        var passes = false;
+
+        if (document.getElementById("checkbox").checked) {
+            passes = true; 
+        }
+        
+        if(passes){
+        document.getElementById("formSubmitted").innerHTML = text
+        }
+        else {
+            event.preventDefault();
+            alert("You must be a robot");
+            return flase;
+            
+        }
+    }
+
+
+</script>
+
+
+
+<script>
+    function sendEmail () {
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "rblaha5226@gmail.com",
+            Password : "password",
+            To : 'rac2171210@maricopa.edu',
+            From : document.getElementById("email").value,
+            Subject : "New Inquiry",
+            Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Message: " + document.getElementById("message").value
+        }).then(
+        message => alert("Message sent sucessfully")
+        );
+    }
+
+</script>
+
+   </body>
+</html>

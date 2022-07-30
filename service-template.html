@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Service -Template</title>
+
+    <link rel="stylesheet" type="text/css" href="css/service_detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+
+    
+
+
+<!--top section with large logo-->
+   <section class="header2">
+       <nav>
+          <a href="dreaded_groomer_home.html"></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="dreaded_groomer_home.html">Home</a></li>
+                  <li><a href="dreaded_groomer_about.html">About</a></li>
+                  <li><a href="dreaded_groomer_services.html">Services</a></li>
+                  <li><a href="dreaded_groomer_products.html">Products</a></li>
+                  <li><a href="dreaded_groomer_contact.html">Connect</a></li>
+                  <li><a href="">Cart</a></li>
+              </ul>
+          </div>
+          <i class="fas fa-bars" onclick="showMenu()"></i>
+       </nav>
+   </section>
+
+  <section class="container">
+    <div class="row">  
+    <div class="item-image">
+          <img src="images/dog-wash.jpg">
+      </div>
+      <div class="description">
+          <div class="new-col"></div>
+          <h2>Bath& Brush</h2> 
+          <p>Includes: bath, nail trim, ear cleaning, scissoring feet & pad shaving, sanitary trim, anal gland cleaning & more. </p>
+          <p><i>De-shedding treatments available for additional charge</i></p>
+          <p>Price starting at:</p>
+         <ul class="pricing-list" style="list-style-type: none;">
+            
+             <li>Small - $35</li>
+             <li>Medium - $45</li>
+             <li>Large - $55</li>
+             <li>X-Large - $65</li>
+         </ul>
+
+         <p><i></i><i class="far fa-star"></i>Prices are subject to change depending upon breed, condition of coat, and haircut.<i class="far fa-star"></i></i></p>
+      </div>
+    </div>
+
+  
+  </section>
+
+  <div class="sizing">
+  <img src="images/size-guide-new.jpg" class="sizing">
+  </div>
+
+<!--footer-->
+<section class="footer">
+    <p>Made by <i>Crooked Crow Creations</i> <i class="far fa-registered"></i></p>
+    <div class="crooked">
+      <img src="images/crooked_crow_logo.jpg" class="crow">
+    </div>
+  </section>
+
+ <!--javascript for toggle menu-->
+ <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+
+
+  </body>
+</html>
